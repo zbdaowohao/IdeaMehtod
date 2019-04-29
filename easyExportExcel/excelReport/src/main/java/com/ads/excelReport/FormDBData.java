@@ -16,6 +16,8 @@ import com.alibaba.fastjson.JSON;
  * 此类为后台给前台封装json用，列合并在后台处理，对于名称相同的则进行上下合并，
  * 不同层级类同名的避免合并可通过添加！<p style='display:none;'>类名称</p>！前台识别去进行处理
  * 行合并通过前台代码进行合并
+ * ！！！因为前台行合并所取的属性是第一行(后台封装数据未反转的最后一行) for (let field in list[0])，
+ * 所以这一行应当保证是最全属性，将全部的mergeRolName都要加上即便全部为false
  */
 public class FormDBData {
 
