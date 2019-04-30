@@ -192,8 +192,9 @@ export default {
         }
       }
       this.saleTabsData = list;
-      //若列存在不同列下同名则可通过隐藏的p标签进行处理
-      /*this.saleTabsData = JSON.parse(JSON.stringify(list));
+      /*
+      // thead若列存在不同列名则可在后台封装key时通过隐藏的p标签进行处理
+      this.saleTabsData = JSON.parse(JSON.stringify(list));
       this.saleTabsData.forEach(row => {
           for(var element in row){
             if (element.indexOf("<p") > -1) {
@@ -207,7 +208,18 @@ export default {
               delete row[element];
             }
           }
-      });*/
+      });
+      // tbody若列存在款行合并某一列则可在后台封装value时通过隐藏的p标签进行处理
+      this.saleTabsData.forEach(element => {
+        有几列需要处理则添加几列
+        if (element['receptionDay'].indexOf("<p")){
+          var start = element['receptionDay'].indexOf("<p");
+          var end = element['receptionDay'].lastIndexOf("</p >")+4
+          var removeStr = element['receptionDay'].substring(start,end);
+          element['receptionDay'] = element['receptionDay'].replace(removeStr, "");
+        }
+      });
+      */
       return list;
     }
   }
