@@ -2,8 +2,8 @@
 <template>
   <div class="sales-summary" style="padding-bottom:38px;">
     <div class="table-wrapper" ref="tableWrapper" style="padding-bottom:38px;">
-      <div style="width:10%; position: absolute; right: 0; top: 50px;">
-        <Button type="ghost" @click="exportData()">导出</Button>
+      <div style="width:10%; position: absolute; right: 10px; top: 250px;">
+        <Button type="primary" @click="exportData()">导出</Button>
       </div>
       <table class="table" id="table">
         <thead>

@@ -1,7 +1,7 @@
 {
-  "name": "demo-echarts",
+  "name": "demo-ExcelReport",
   "version": "1.0.0",
-  "description": "echarts for vue",
+  "description": "demo-ExcelReport for vue",
   "author": "houbberVan",
   "private": true,
   "scripts": {
@@ -10,8 +10,7 @@
     "build": "node build/build.js"
   },
   "dependencies": {
-    "axios": "^0.18.0",
-    "iview": "^3.1.1",
+    "iview": "^3.4.2",
     "js-cookie": "^2.2.0",
     "vue": "^2.5.16",
     "vue-resource": "^1.5.1"

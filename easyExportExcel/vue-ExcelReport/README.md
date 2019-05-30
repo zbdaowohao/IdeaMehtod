@@ -1,6 +1,6 @@
-# demo-echarts
+# demo-ExcelReport
 
-> echarts for vue
+> demo-ExcelReport for vue
 
 ## Build Setup
 
