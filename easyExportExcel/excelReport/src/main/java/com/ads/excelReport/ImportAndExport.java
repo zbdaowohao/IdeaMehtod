@@ -41,6 +41,7 @@ public class ImportAndExport {
 		try {
 			List<Employee> dataList = new Gson().fromJson(tableData, new ArrayList<Employee>().getClass());
 
+			// 顺序和Excel文件中列名称保持一致（为无标题导入，有标题则应当起始RowIndex=2）
 			LinkedHashMap<String, String> filedMap = new LinkedHashMap<>();
 			filedMap.put("employeeName", "姓名");
 			filedMap.put("gender", "性别");
@@ -67,7 +68,7 @@ public class ImportAndExport {
 		logger.info("上传文件......");
 		List<Employee> Employees = new ArrayList<Employee>();
 		try {
-			// 必填字段设置，必填则为true
+			// 必填字段设置，必填则为true,顺序和Excel文件中列名称保持一致
 			LinkedHashMap<String, String> filedMap = new LinkedHashMap<>();
 			filedMap.put("employeeName", "true");
 			filedMap.put("gender", "false");
